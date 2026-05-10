@@ -27,7 +27,7 @@ File ini dipakai untuk tracking progress dan pembagian penanggung jawab. Berbeda
 | 12 | Seoul Bike Sharing Demand | `Rented Bike Count` | `12_seoul_bike_sharing_demand` | Codex | Selesai | Selesai | Selesai | Target diambil dari kolom fitur UCI; `Date` dihapus, kategori di-encode, visual memakai line plot per jam dan boxplot musim. |
 | 13 | House Rent Prediction Dataset | `Rent` | `13_house_rent_prediction_dataset` | Codex | Selesai | Selesai | Selesai | Kaggle; file utama `House_Rent_Dataset.csv`, kolom teks detail dihapus, kategori ringkas di-encode. |
 | 14 | Airfoil Self-Noise | `scaled-sound-pressure` | `14_airfoil_self_noise` | Codex | Selesai | Selesai | Selesai | UCI tersedia via `fetch_ucirepo`; semua fitur numerik, visual memakai line plot frequency dan regression plot fitur kontinu. |
-| 15 | Yacht Hydrodynamics | `residuary resistance` | `15_yacht_hydrodynamics` |  | Belum | Belum | Belum | Dataset kecil, cocok untuk struktur sederhana. |
+| 15 | Yacht Hydrodynamics | `residuary_resistance` | `15_yacht_hydrodynamics` | Codex | Selesai | Selesai | Selesai | UCI raw dipakai karena tidak tersedia via `fetch_ucirepo`; semua fitur numerik, visual menekankan `froude_number`. |
 | 16 | Appliances Energy Prediction | `Appliances` | `16_appliances_energy_prediction` |  | Belum | Belum | Belum | Dataset lebih besar; drop/parse date secara sederhana. |
 | 17 | Concrete Slump Test | `Compressive Strength or SLUMP or FLOW` | `17_concrete_slump_test` |  | Belum | Belum | Belum | Pilih satu target saja. |
 | 18 | Computer Hardware | `PRP` | `18_computer_hardware` |  | Belum | Belum | Belum | Drop nama model atau encode kategori jika dipakai. |
