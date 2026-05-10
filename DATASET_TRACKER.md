@@ -32,4 +32,4 @@ File ini dipakai untuk tracking progress dan pembagian penanggung jawab. Berbeda
 | 17 | Concrete Slump Test | `Compressive Strength (28-day)(Mpa)` | `17_concrete_slump_test` | Codex | Selesai | Selesai | Selesai | UCI raw dipakai; target dipilih compressive strength, `SLUMP(cm)` dan `FLOW(cm)` dihapus sebelum modeling. |
 | 18 | Computer Hardware | `PRP` | `18_computer_hardware` | Codex | Selesai | Selesai | Selesai | UCI via `fetch_ucirepo`; target `PRP` berada di data fitur, `VendorName`, `ModelName`, dan `ERP` dihapus sebelum modeling. |
 | 19 | QSAR Fish Toxicity | `LC50` | `19_qsar_fish_toxicity` | Codex | Selesai | Selesai | Selesai | UCI raw dipakai; delimiter `;`, satu duplikat dihapus, semua fitur numerik. |
-| 20 | Abalone | `Rings` | `20_abalone` |  | Belum | Belum | Belum | Encode kolom `Sex`. |
+| 20 | Abalone | `Rings` | `20_abalone` | Codex | Selesai | Selesai | Selesai | UCI via `fetch_ucirepo`; target hitungan divisualkan dengan count plot, `Sex` di-encode dengan `pd.get_dummies()`. |
