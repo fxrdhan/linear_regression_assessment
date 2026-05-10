@@ -18,7 +18,7 @@ File ini dipakai untuk tracking progress dan pembagian penanggung jawab. Berbeda
 | 3 | Real Estate Valuation | `Y house price of unit area` | `03_real_estate_valuation` | Codex | Selesai | Selesai | Selesai | Kolom `X1 transaction date` dihapus sebelum modeling. |
 | 4 | Auto MPG | `mpg` | `04_auto_mpg` | Codex | Selesai | Selesai | Selesai | Missing value pada `horsepower` dihapus sebelum modeling. |
 | 5 | Combined Cycle Power Plant | `PE` | `05_combined_cycle_power_plant` | Codex | Selesai | Selesai | Selesai | Duplikat penuh dihapus; fitur numerik semua. |
-| 6 | Bike Sharing Dataset | `cnt` | `06_bike_sharing_dataset` |  | Belum | Belum | Belum | Gunakan salah satu file utama dan tangani kolom tanggal. |
+| 6 | Bike Sharing Dataset | `cnt` | `06_bike_sharing_dataset` | Codex | Selesai | Selesai | Selesai | Kolom `dteday` dihapus; duplikat setelah drop tanggal ikut dihapus. |
 | 7 | Wine Quality | `quality` | `07_wine_quality` |  | Belum | Belum | Belum | Target ordinal, tetap dipakai untuk latihan regresi sederhana. |
 | 8 | Student Performance | `G3` | `08_student_performance` |  | Belum | Belum | Belum | Perlu encoding kolom kategori. |
 | 9 | Air Quality | `CO(GT) or NOx(GT) or NO2(GT)` | `09_air_quality` |  | Belum | Belum | Belum | Pilih satu target dan tangani nilai sentinel seperti -200. |
