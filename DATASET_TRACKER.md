@@ -20,7 +20,7 @@ File ini dipakai untuk tracking progress dan pembagian penanggung jawab. Berbeda
 | 5 | Combined Cycle Power Plant | `PE` | `05_combined_cycle_power_plant` | Codex | Selesai | Selesai | Selesai | Duplikat penuh dihapus; fitur numerik semua. |
 | 6 | Bike Sharing Dataset | `cnt` | `06_bike_sharing_dataset` | Codex | Selesai | Selesai | Selesai | Kolom `dteday` dihapus; duplikat setelah drop tanggal ikut dihapus. |
 | 7 | Wine Quality | `quality` | `07_wine_quality` | Codex | Selesai | Selesai | Selesai | Target skor diskret; visual EDA memakai count plot dan boxplot. |
-| 8 | Student Performance | `G3` | `08_student_performance` |  | Belum | Belum | Belum | Perlu encoding kolom kategori. |
+| 8 | Student Performance | `G3` | `08_student_performance` | Codex | Selesai | Selesai | Selesai | Kolom kategori di-encode dengan `pd.get_dummies()`. |
 | 9 | Air Quality | `CO(GT) or NOx(GT) or NO2(GT)` | `09_air_quality` |  | Belum | Belum | Belum | Pilih satu target dan tangani nilai sentinel seperti -200. |
 | 10 | Medical Cost Personal Dataset / Insurance | `charges` | `10_medical_cost_personal_dataset_insurance` |  | Belum | Belum | Belum | Kaggle; gunakan file utama `insurance.csv`. |
 | 11 | Fish Market | `Weight` | `11_fish_market` |  | Belum | Belum | Belum | Kaggle; gunakan file utama `Fish.csv`. |
