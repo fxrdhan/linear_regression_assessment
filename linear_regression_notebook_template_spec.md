@@ -19,7 +19,7 @@ Requirements:
 
 Recommended notebook cells:
 
-1. Markdown: title, dataset name, source URL, recommended target.
+1. Markdown: title, dataset name, recommended target, problem type, and model.
 2. Markdown: assessment objective and short rules.
 3. Markdown: student identity section.
 4. Markdown: dataset description section.
