@@ -16,7 +16,7 @@ File ini dipakai untuk tracking progress dan pembagian penanggung jawab. Berbeda
 | 1 | Concrete Compressive Strength | `Concrete compressive strength` | `01_concrete_compressive_strength` |  | Selesai | Selesai | Selesai | Contoh format utama sudah tersedia. |
 | 2 | Energy Efficiency | `Y1` / Heating Load | `02_energy_efficiency` | Codex | Selesai | Selesai | Selesai | Target dipilih satu: Heating Load (`Y1`). |
 | 3 | Real Estate Valuation | `Y house price of unit area` | `03_real_estate_valuation` | Codex | Selesai | Selesai | Selesai | Kolom `X1 transaction date` dihapus sebelum modeling. |
-| 4 | Auto MPG | `mpg` | `04_auto_mpg` |  | Belum | Belum | Belum | Tangani missing value pada horsepower jika muncul. |
+| 4 | Auto MPG | `mpg` | `04_auto_mpg` | Codex | Selesai | Selesai | Selesai | Missing value pada `horsepower` dihapus sebelum modeling. |
 | 5 | Combined Cycle Power Plant | `PE` | `05_combined_cycle_power_plant` |  | Belum | Belum | Belum | Semua fitur numerik, cocok untuk baseline sederhana. |
 | 6 | Bike Sharing Dataset | `cnt` | `06_bike_sharing_dataset` |  | Belum | Belum | Belum | Gunakan salah satu file utama dan tangani kolom tanggal. |
 | 7 | Wine Quality | `quality` | `07_wine_quality` |  | Belum | Belum | Belum | Target ordinal, tetap dipakai untuk latihan regresi sederhana. |
