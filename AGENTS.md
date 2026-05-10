@@ -24,6 +24,7 @@ Spreadsheet wajib memiliki kolom berikut:
 - `Deskripsi Singkat`
 
 Gunakan `No`, `Dataset`, dan `Recommended Target` sebagai dasar nama file, judul notebook, target modeling, dan kesimpulan.
+Gunakan `Source URL` hanya untuk mengambil atau memverifikasi dataset. Jangan tampilkan baris sumber dataset pada intro notebook.
 
 ## Struktur Folder
 
@@ -192,11 +193,12 @@ Gunakan alur analisis sederhana berikut jika relevan dengan dataset:
 
 Pilih plot sesuai karakter data. Jangan memakai jenis plot yang sama untuk semua dataset.
 
+- Cek tipe data dan jumlah nilai unik sebelum memilih visualisasi.
 - Untuk fitur numerik kontinu, gunakan scatter plot atau regression plot jika hubungan titik data memang mudah dibaca.
 - Untuk fitur numerik yang nilainya sedikit atau berbentuk kelompok, gunakan boxplot, bar plot rata-rata, atau line plot rata-rata.
 - Untuk fitur kategori, gunakan bar plot rata-rata atau boxplot setelah kategori jelas.
 - Untuk fitur waktu atau umur yang berurutan, gunakan line plot rata-rata jika scatter terlalu menumpuk.
-- Jangan memaksakan garis regresi pada fitur yang hanya memiliki beberapa nilai unik.
+- Jangan memaksakan scatter plot atau garis regresi pada fitur yang hanya memiliki beberapa nilai unik.
 - Judul, label sumbu, dan pertanyaan analisis harus mengikuti plot yang benar-benar dipakai.
 
 ## Penanganan Dataset
