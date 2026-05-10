@@ -30,6 +30,6 @@ File ini dipakai untuk tracking progress dan pembagian penanggung jawab. Berbeda
 | 15 | Yacht Hydrodynamics | `residuary_resistance` | `15_yacht_hydrodynamics` | Codex | Selesai | Selesai | Selesai | UCI raw dipakai karena tidak tersedia via `fetch_ucirepo`; semua fitur numerik, visual menekankan `froude_number`. |
 | 16 | Appliances Energy Prediction | `Appliances` | `16_appliances_energy_prediction` | Codex | Selesai | Selesai | Selesai | UCI via `fetch_ucirepo`; `date`, `rv1`, dan `rv2` dihapus sebelum modeling. |
 | 17 | Concrete Slump Test | `Compressive Strength (28-day)(Mpa)` | `17_concrete_slump_test` | Codex | Selesai | Selesai | Selesai | UCI raw dipakai; target dipilih compressive strength, `SLUMP(cm)` dan `FLOW(cm)` dihapus sebelum modeling. |
-| 18 | Computer Hardware | `PRP` | `18_computer_hardware` |  | Belum | Belum | Belum | Drop nama model atau encode kategori jika dipakai. |
+| 18 | Computer Hardware | `PRP` | `18_computer_hardware` | Codex | Selesai | Selesai | Selesai | UCI via `fetch_ucirepo`; target `PRP` berada di data fitur, `VendorName`, `ModelName`, dan `ERP` dihapus sebelum modeling. |
 | 19 | QSAR Fish Toxicity | `LC50` | `19_qsar_fish_toxicity` |  | Belum | Belum | Belum | Fitur numerik ringkas. |
 | 20 | Abalone | `Rings` | `20_abalone` |  | Belum | Belum | Belum | Encode kolom `Sex`. |
