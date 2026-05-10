@@ -14,7 +14,7 @@ File ini dipakai untuk tracking progress dan pembagian penanggung jawab. Berbeda
 | No | Dataset | Target | Folder | Penanggung Jawab | Folder | Assessment | Kunci Jawaban | Catatan |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Concrete Compressive Strength | `Concrete compressive strength` | `01_concrete_compressive_strength` |  | Selesai | Selesai | Selesai | Contoh format utama sudah tersedia. |
-| 2 | Energy Efficiency | `Heating Load or Cooling Load` | `02_energy_efficiency` |  | Belum | Belum | Belum | Pilih satu target saja. |
+| 2 | Energy Efficiency | `Y1` / Heating Load | `02_energy_efficiency` | Codex | Selesai | Selesai | Selesai | Target dipilih satu: Heating Load (`Y1`). |
 | 3 | Real Estate Valuation | `house price of unit area` | `03_real_estate_valuation` |  | Belum | Belum | Belum | Cek kolom ID/date-like sebelum modeling. |
 | 4 | Auto MPG | `mpg` | `04_auto_mpg` |  | Belum | Belum | Belum | Tangani missing value pada horsepower jika muncul. |
 | 5 | Combined Cycle Power Plant | `PE` | `05_combined_cycle_power_plant` |  | Belum | Belum | Belum | Semua fitur numerik, cocok untuk baseline sederhana. |
