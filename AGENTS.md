@@ -188,6 +188,17 @@ Gunakan alur analisis sederhana berikut jika relevan dengan dataset:
 - evaluasi MAE, RMSE, dan R2,
 - visualisasi aktual vs prediksi.
 
+## Aturan Visualisasi
+
+Pilih plot sesuai karakter data. Jangan memakai jenis plot yang sama untuk semua dataset.
+
+- Untuk fitur numerik kontinu, gunakan scatter plot atau regression plot jika hubungan titik data memang mudah dibaca.
+- Untuk fitur numerik yang nilainya sedikit atau berbentuk kelompok, gunakan boxplot, bar plot rata-rata, atau line plot rata-rata.
+- Untuk fitur kategori, gunakan bar plot rata-rata atau boxplot setelah kategori jelas.
+- Untuk fitur waktu atau umur yang berurutan, gunakan line plot rata-rata jika scatter terlalu menumpuk.
+- Jangan memaksakan garis regresi pada fitur yang hanya memiliki beberapa nilai unik.
+- Judul, label sumbu, dan pertanyaan analisis harus mengikuti plot yang benar-benar dipakai.
+
 ## Penanganan Dataset
 
 - Untuk UCI yang tersedia lewat `ucimlrepo`, gunakan `fetch_ucirepo`.
