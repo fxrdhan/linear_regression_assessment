@@ -1,15 +1,21 @@
-# Instruksi Agent - Generate Notebook Assessment Linear Regression
+# Instruksi Agent - Assessment Linear Regression
 
-Agent berikutnya harus menjalankan proses pembuatan notebook secara looping dari daftar dataset pada `linear_regression_dataset_spreadsheet.xlsx` atau `linear_regression_dataset_spreadsheet.csv`.
+File ini adalah instruksi statis untuk membuat notebook assessment dan kunci jawaban Linear Regression. Jangan gunakan file ini untuk mencatat progress harian, pembagian tugas, atau status dataset. Semua tracking dinamis wajib ditulis di `DATASET_TRACKER.md`.
 
-Untuk setiap baris dataset, buat dua notebook:
+## Tujuan
 
-- Notebook assessment / soal untuk peserta.
-- Notebook kunci jawaban / clean solution.
+Buat notebook assessment akhir mini bootcamp Machine Learning untuk setiap dataset pada `linear_regression_dataset_spreadsheet.xlsx` atau `linear_regression_dataset_spreadsheet.csv`.
 
-Kedua notebook harus memiliki layout yang sama persis. Perbedaannya hanya pada isi code cell, output, dan jawaban analisis.
+Untuk setiap dataset, agent wajib membuat dua notebook dengan layout cell yang identik:
 
-Spreadsheet berisi kolom:
+- notebook assessment untuk peserta,
+- notebook kunci jawaban.
+
+Perbedaan hanya boleh ada pada isi code cell, output cell, dan jawaban analisis.
+
+## Input Spreadsheet
+
+Spreadsheet wajib memiliki kolom berikut:
 
 - `No`
 - `Dataset`
@@ -17,21 +23,26 @@ Spreadsheet berisi kolom:
 - `Recommended Target`
 - `Deskripsi Singkat`
 
-## Nama File Output
+Gunakan `No`, `Dataset`, dan `Recommended Target` sebagai dasar nama file, judul notebook, target modeling, dan kesimpulan.
 
-Untuk setiap dataset, buat:
+## Struktur Folder
 
-- Folder dataset: gunakan format nomor dataset + slug nama dataset.
-- Assessment: gunakan format nomor dataset + slug nama dataset + `_linear_regression.ipynb`.
-- Kunci jawaban: gunakan prefix `Kunci_Jawaban_` + nama file assessment.
+Setiap dataset wajib memiliki satu folder sendiri.
+
+Format folder:
+
+```text
+<no dua digit>_<slug_dataset>
+```
+
+Format file:
+
+```text
+<no dua digit>_<slug_dataset>_linear_regression.ipynb
+Kunci_Jawaban_<no dua digit>_<slug_dataset>_linear_regression.ipynb
+```
 
 Contoh:
-
-- Folder: `01_concrete_compressive_strength`
-- Assessment: `01_concrete_compressive_strength_linear_regression.ipynb`
-- Kunci jawaban: `Kunci_Jawaban_01_concrete_compressive_strength_linear_regression.ipynb`
-
-Struktur setiap dataset wajib seperti ini:
 
 ```text
 01_concrete_compressive_strength/
@@ -39,11 +50,11 @@ Struktur setiap dataset wajib seperti ini:
 └── Kunci_Jawaban_01_concrete_compressive_strength_linear_regression.ipynb
 ```
 
-Jangan menaruh notebook dataset langsung di root folder project. Root folder hanya untuk file pengarah seperti `AGENTS.md`, spreadsheet dataset, dan dokumen spesifikasi.
+Jangan menaruh notebook dataset langsung di root project. Root project hanya untuk file pengarah seperti `AGENTS.md`, `DATASET_TRACKER.md`, spreadsheet, dan dokumen spesifikasi.
 
-## Alur Notebook Wajib
+## Urutan Notebook
 
-Setiap notebook harus mengikuti urutan besar berikut:
+Setiap notebook wajib memakai urutan section berikut:
 
 1. Setup
 2. Load Dataset
@@ -57,34 +68,60 @@ Setiap notebook harus mengikuti urutan besar berikut:
 10. Prediksi dan Evaluasi
 11. Kesimpulan
 
-Setiap code cell harus didahului markdown heading level 3 (`###`) yang menjelaskan langkah di bawahnya.
+Setiap code cell wajib didahului markdown heading level 3 (`###`) dengan deskripsi singkat langkah di bawahnya.
 
-## Format Notebook Assessment
+## Aturan Umum Cell
+
+- Jangan gunakan kata `TODO`.
+- Jangan gunakan `print()` jika output bisa ditampilkan dengan ekspresi terakhir atau `display()`.
+- Satu code cell sebaiknya menghasilkan satu output.
+- Semua code cell wajib bebas trailing whitespace.
+- Source code cell tidak boleh berakhir dengan baris kosong.
+- Code cell boleh multi-line jika memang dibutuhkan, tetapi jangan menambah newline kosong di akhir cell.
+- Bahasa markdown harus beginner-friendly untuk mahasiswa tingkat awal.
+- Jangan membuat analisis terlalu rumit atau terlalu panjang.
+
+## Notebook Assessment
 
 Notebook assessment adalah template pengerjaan peserta.
 
-Aturan:
+Aturan wajib:
 
-- Layout harus sama persis dengan notebook kunci jawaban.
-- Code cell utama dikosongkan agar peserta mengisi sendiri.
-- Jangan isi code cell kosong dengan komentar.
-- Jangan gunakan kata `TODO`.
-- Jangan sertakan output apa pun.
-- Jangan sertakan execution count.
-- Code cell tidak boleh memiliki trailing whitespace atau baris kosong di akhir cell.
-- Bagian teknis berikut boleh sudah terisi default:
-  - `warnings.filterwarnings("ignore")`
-  - `pd.set_option("display.float_format", lambda x: f"{x:.3f}")`
-  - `sns.set_theme(style="whitegrid")`
-- Untuk dataset UCI yang menggunakan `fetch_ucirepo`, code cell pengambilan dataset wajib sudah terisi default, misalnya `concrete = fetch_ucirepo(id=165)`.
-- Untuk dataset Kaggle, code cell upload atau load path file utama boleh sudah terisi default jika hanya berupa boilerplate akses file.
-- Markdown setelah output cell pada kunci jawaban harus diubah menjadi pertanyaan untuk peserta.
-- Pertanyaan harus memakai blockquote Markdown.
-- Jika ada lebih dari satu pertanyaan, pisahkan setiap pertanyaan menjadi blockquote sendiri.
-- Setelah setiap pertanyaan, beri ruang jawaban berupa `...`.
-- Bagian kesimpulan jangan memakai blockquote. Gunakan paragraf biasa dengan bracket isian.
+- Code cell utama harus kosong agar peserta mengisi sendiri.
+- Code cell kosong tidak boleh berisi komentar.
+- Notebook tidak boleh memiliki output.
+- Notebook tidak boleh memiliki execution count.
+- Bagian kesimpulan berbentuk paragraf biasa dengan bracket isian, bukan blockquote.
 
-Contoh format pertanyaan:
+Code cell berikut boleh terisi default karena hanya boilerplate:
+
+```python
+warnings.filterwarnings("ignore")
+pd.set_option("display.float_format", lambda x: f"{x:.3f}")
+sns.set_theme(style="whitegrid")
+```
+
+Untuk dataset UCI yang memakai `fetch_ucirepo`, cell pengambilan dataset wajib terisi default.
+
+Contoh:
+
+```python
+concrete = fetch_ucirepo(id=165)
+```
+
+Untuk dataset Kaggle, cell upload atau load file utama boleh terisi default jika hanya berisi boilerplate akses file.
+
+## Pertanyaan Assessment
+
+Markdown setelah output cell pada notebook kunci jawaban harus diubah menjadi pertanyaan pada notebook assessment.
+
+Format wajib:
+
+- Gunakan blockquote Markdown.
+- Pisahkan setiap pertanyaan menjadi blockquote sendiri.
+- Tambahkan `...` setelah setiap pertanyaan sebagai ruang jawaban.
+
+Contoh:
 
 ```markdown
 > Berdasarkan output `info()`, apa tipe data setiap kolom?
@@ -96,7 +133,7 @@ Contoh format pertanyaan:
 ...
 ```
 
-Contoh format kesimpulan assessment:
+Format kesimpulan assessment:
 
 ```markdown
 ## 11 - Kesimpulan
@@ -106,24 +143,20 @@ Lengkapi kesimpulan berikut berdasarkan seluruh output notebook:
 Dataset [nama dataset] digunakan untuk memprediksi [target] berdasarkan [fitur utama]. Data [tidak memiliki/memiliki] missing value dan memiliki [jumlah] baris duplikat penuh.
 ```
 
-## Format Notebook Kunci Jawaban
+## Notebook Kunci Jawaban
 
-Notebook kunci jawaban adalah versi clean solution.
+Notebook kunci jawaban adalah clean solution.
 
-Aturan:
+Aturan wajib:
 
-- Layout harus identik dengan notebook assessment.
 - Code cell berisi kode lengkap.
-- Output boleh ada dan harus relevan.
-- Usahakan satu code cell hanya menghasilkan satu output.
-- Code cell tidak boleh memiliki trailing whitespace atau baris kosong di akhir cell.
-- Hindari `print()` yang tidak perlu.
-- Gunakan ekspresi terakhir atau `display()` jika memang perlu menampilkan objek.
-- Markdown pertanyaan dari notebook assessment tetap dipakai, tetapi setiap `...` diganti dengan jawaban kunci.
-- Jawaban harus singkat, jelas, dan beginner-friendly.
+- Output cell boleh ada dan harus relevan.
+- Pertanyaan dari notebook assessment tetap dipakai.
+- Setiap `...` pada assessment diganti menjadi jawaban kunci.
+- Jawaban kunci harus singkat, jelas, dan sesuai output.
 - Kesimpulan akhir ditulis sebagai paragraf lengkap tanpa bracket kosong.
 
-Contoh format jawaban:
+Contoh:
 
 ```markdown
 > Berdasarkan output `info()`, apa tipe data setiap kolom?
@@ -135,86 +168,81 @@ Jawaban: Tipe data kolom terdiri dari data numerik, yaitu `float64` dan `int64`.
 Jawaban: Tidak, jumlah non-null sama dengan jumlah baris dataset sehingga tidak terlihat missing value dari output `info()`.
 ```
 
-## Kompleksitas Analisis
+## Isi Analisis Minimal
 
-Notebook harus cukup lengkap tetapi tetap beginner-friendly.
+Gunakan alur analisis sederhana berikut jika relevan dengan dataset:
 
-Gunakan pola sederhana:
-
-- `df.shape`
-- `df.head()`
-- `df.info()`
-- `df.isna().sum()`
-- `df.duplicated().sum()`
-- `df.describe()`
-- histogram target
-- korelasi fitur dengan target
-- satu atau dua visualisasi hubungan fitur penting dengan target
-- split train-test
-- scaling dengan `StandardScaler`
-- model `LinearRegression`
-- evaluasi menggunakan MAE, RMSE, dan R2
-- visualisasi aktual vs prediksi
-
-Jangan membuat analisis terlalu rumit seperti modul tingkat lanjut. Assessment ini untuk mahasiswa tingkat awal.
+- ukuran dataset dengan `df.shape`,
+- lima baris pertama dengan `df.head()`,
+- informasi dataset dengan `df.info()`,
+- missing value dengan `df.isna().sum()`,
+- duplikat dengan `df.duplicated().sum()`,
+- statistik deskriptif dengan `df.describe()`,
+- histogram target,
+- korelasi fitur dengan target,
+- satu atau dua visualisasi hubungan fitur penting dengan target,
+- pemisahan feature dan target,
+- train-test split,
+- scaling dengan `StandardScaler`,
+- model `LinearRegression`,
+- evaluasi MAE, RMSE, dan R2,
+- visualisasi aktual vs prediksi.
 
 ## Penanganan Dataset
 
-Gunakan pendekatan yang sesuai dengan sumber:
-
 - Untuk UCI yang tersedia lewat `ucimlrepo`, gunakan `fetch_ucirepo`.
-- Pada notebook assessment untuk UCI, cell `fetch_ucirepo(id=...)` jangan dikosongkan karena ID dataset adalah bagian boilerplate, bukan jawaban analisis peserta.
-- Untuk Kaggle, berikan cell load dataset yang jelas dan beginner-friendly.
-- Jika Kaggle membutuhkan file lokal, buat instruksi markdown agar peserta upload atau menaruh CSV pada path yang jelas.
+- Untuk Kaggle, gunakan instruksi load dataset yang jelas dan beginner-friendly.
+- Jika Kaggle memakai file lokal, sebutkan nama file utama yang harus diupload atau diletakkan di folder kerja.
+- Jika dataset memiliki beberapa target, pilih satu target saja.
 - Jika ada kolom tanggal, drop atau parse secara sederhana.
-- Jika ada kolom kategori, gunakan one-hot encoding dengan `pd.get_dummies()`.
-- Jika ada missing value, gunakan strategi sederhana seperti drop baris atau imputasi median/mode sesuai kebutuhan.
-- Jika ada nilai sentinel seperti `-200`, ubah menjadi missing value terlebih dahulu.
+- Jika ada kolom kategori, gunakan `pd.get_dummies()`.
+- Jika ada missing value, gunakan strategi sederhana seperti drop baris, imputasi median, atau imputasi mode.
+- Jika ada nilai sentinel seperti `-200`, ubah menjadi missing value sebelum cleaning.
 
-## Validasi Wajib Setelah Generate
+## Validasi Wajib
 
-Setelah membuat semua notebook, agent wajib mengecek:
+Sebelum commit, agent wajib memeriksa:
 
-- Setiap dataset menghasilkan satu folder dataset.
-- Setiap folder dataset berisi dua file notebook: assessment dan kunci jawaban.
-- Notebook assessment tidak memiliki output.
-- Notebook assessment tidak memiliki execution count.
-- Notebook assessment tidak memiliki code cell utama yang terisi, kecuali setting teknis default yang memang diizinkan.
-- Semua code cell bebas trailing whitespace dan tidak memiliki baris kosong di akhir cell.
-- Notebook assessment tidak mengandung `TODO`.
-- Notebook kunci jawaban memiliki kode lengkap.
-- Notebook kunci jawaban memiliki layout cell yang sama dengan assessment.
-- Semua notebook valid dibaca oleh `nbformat`.
+- setiap dataset memiliki satu folder,
+- setiap folder dataset berisi notebook assessment dan kunci jawaban,
+- layout cell assessment dan kunci jawaban identik,
+- notebook assessment tidak memiliki output,
+- notebook assessment tidak memiliki execution count,
+- code cell assessment hanya terisi pada boilerplate yang diizinkan,
+- semua code cell bebas trailing whitespace dan baris kosong di akhir cell,
+- notebook assessment tidak mengandung `TODO`,
+- notebook kunci jawaban memiliki kode lengkap,
+- semua notebook valid dibaca oleh `nbformat`.
 
 ## Aturan Git
 
-Setiap selesai melakukan pengeditan file, agent wajib membuat commit git.
+Setiap selesai mengedit file, agent wajib membuat commit.
 
 Aturan commit:
 
 - Gunakan conventional commit.
-- Commit harus spesifik terhadap perubahan yang baru dilakukan.
-- Jangan menggabungkan perubahan yang tidak berhubungan dalam satu commit.
-- Jangan melakukan commit jika validasi perubahan yang relevan belum dilakukan.
-- Jika worktree memiliki perubahan lama dari user, jangan revert perubahan tersebut. Commit hanya file yang memang diedit untuk tugas saat itu.
+- Commit hanya file yang diedit untuk tugas saat itu.
+- Commit harus spesifik terhadap perubahan yang dilakukan.
+- Jangan gabungkan perubahan yang tidak berhubungan dalam satu commit.
+- Jangan commit sebelum validasi relevan selesai.
+- Jangan revert perubahan user kecuali user meminta secara eksplisit.
 
-Contoh format commit:
+Contoh:
 
 ```text
-docs: update dataset generation instructions
+docs: clarify notebook generation rules
 chore: reorganize dataset folders
 feat: add assessment notebook for energy efficiency
 fix: clean empty outputs in assessment notebook
 ```
 
-## Tracker Project
-
-Jangan menyimpan status progress, pembagian penanggung jawab, atau catatan pengerjaan dinamis di `AGENTS.md`.
+## Tracker
 
 Gunakan `DATASET_TRACKER.md` untuk mencatat:
 
-- penanggung jawab setiap dataset,
+- penanggung jawab dataset,
 - status folder dataset,
 - status notebook assessment,
 - status notebook kunci jawaban,
-- catatan pengerjaan atau blocker.
+- catatan pengerjaan,
+- blocker.
