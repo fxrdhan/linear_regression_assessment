@@ -9,7 +9,7 @@ No,Dataset,Source URL,Recommended Target,Deskripsi Singkat
 8,Student Performance,https://archive.ics.uci.edu/dataset/320/student+performance,G3,Dataset UCI untuk memprediksi nilai akhir siswa dari data akademik dan karakteristik siswa.
 9,Air Quality,https://archive.ics.uci.edu/dataset/360/air+quality,CO(GT) or NOx(GT) or NO2(GT),Dataset UCI sensor kualitas udara untuk memprediksi konsentrasi polutan numerik.
 10,Medical Cost Personal Dataset / Insurance,https://www.kaggle.com/datasets/mirichoi0218/insurance,charges,Dataset Kaggle untuk memprediksi biaya asuransi kesehatan dari data demografi dan kebiasaan.
-11,Fish Market,https://www.kaggle.com/datasets/aungpyaeap/fish-market,Weight,Dataset Kaggle untuk memprediksi berat ikan dari ukuran fisik dan spesies ikan.
+11,Fish Market,https://www.kaggle.com/datasets/vipullrathod/fish-market,Weight,Dataset Kaggle untuk memprediksi berat ikan dari ukuran fisik dan spesies ikan.
 12,Seoul Bike Sharing Demand,https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand,Rented Bike Count,Dataset UCI untuk memprediksi jumlah penyewaan sepeda di Seoul dari cuaca dan kalender.
 13,House Rent Prediction Dataset,https://www.kaggle.com/datasets/iamsouravbanerjee/house-rent-prediction-dataset,Rent,Dataset Kaggle untuk memprediksi harga sewa rumah dari lokasi dan detail properti.
 14,Airfoil Self-Noise,https://archive.ics.uci.edu/dataset/291/airfoil+self+noise,scaled-sound-pressure,Dataset UCI eksperimen airfoil NASA untuk memprediksi tingkat tekanan suara.

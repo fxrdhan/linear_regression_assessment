@@ -23,7 +23,7 @@ File ini dipakai untuk tracking progress dan pembagian penanggung jawab. Berbeda
 | 8 | Student Performance | `G3` | `08_student_performance` | Codex | Selesai | Selesai | Selesai | Kolom kategori di-encode dengan `pd.get_dummies()`. |
 | 9 | Air Quality | `CO(GT)` | `09_air_quality` | Codex | Selesai | Selesai | Selesai | Nilai sentinel `-200` diubah menjadi missing; target dipilih `CO(GT)`. |
 | 10 | Medical Cost Personal Dataset / Insurance | `charges` | `10_medical_cost_personal_dataset_insurance` | Codex | Selesai | Selesai | Selesai | Kaggle; file utama `insurance.csv`, kategori di-encode dengan `pd.get_dummies()`. |
-| 11 | Fish Market | `Weight` | `11_fish_market` |  | Belum | Belum | Belum | Kaggle; gunakan file utama `Fish.csv`. |
+| 11 | Fish Market | `Weight` | `11_fish_market` | Codex | Selesai | Selesai | Selesai | Kaggle; sumber diganti ke mirror yang bisa diakses, file utama `Fish.csv`, `Species` di-encode dengan `pd.get_dummies()`. |
 | 12 | Seoul Bike Sharing Demand | `Rented Bike Count` | `12_seoul_bike_sharing_demand` |  | Belum | Belum | Belum | Tangani tanggal dan kategori sederhana. |
 | 13 | House Rent Prediction Dataset | `Rent` | `13_house_rent_prediction_dataset` |  | Belum | Belum | Belum | Kaggle; gunakan file utama `House_Rent_Dataset.csv`. |
 | 14 | Airfoil Self-Noise | `scaled-sound-pressure` | `14_airfoil_self_noise` |  | Belum | Belum | Belum | Cek nama kolom jika data mentah tidak punya header. |
