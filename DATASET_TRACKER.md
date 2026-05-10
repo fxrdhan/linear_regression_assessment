@@ -21,7 +21,7 @@ File ini dipakai untuk tracking progress dan pembagian penanggung jawab. Berbeda
 | 6 | Bike Sharing Dataset | `cnt` | `06_bike_sharing_dataset` | Codex | Selesai | Selesai | Selesai | Kolom `dteday` dihapus; duplikat setelah drop tanggal ikut dihapus. |
 | 7 | Wine Quality | `quality` | `07_wine_quality` | Codex | Selesai | Selesai | Selesai | Target skor diskret; visual EDA memakai count plot dan boxplot. |
 | 8 | Student Performance | `G3` | `08_student_performance` | Codex | Selesai | Selesai | Selesai | Kolom kategori di-encode dengan `pd.get_dummies()`. |
-| 9 | Air Quality | `CO(GT) or NOx(GT) or NO2(GT)` | `09_air_quality` |  | Belum | Belum | Belum | Pilih satu target dan tangani nilai sentinel seperti -200. |
+| 9 | Air Quality | `CO(GT)` | `09_air_quality` | Codex | Selesai | Selesai | Selesai | Nilai sentinel `-200` diubah menjadi missing; target dipilih `CO(GT)`. |
 | 10 | Medical Cost Personal Dataset / Insurance | `charges` | `10_medical_cost_personal_dataset_insurance` |  | Belum | Belum | Belum | Kaggle; gunakan file utama `insurance.csv`. |
 | 11 | Fish Market | `Weight` | `11_fish_market` |  | Belum | Belum | Belum | Kaggle; gunakan file utama `Fish.csv`. |
 | 12 | Seoul Bike Sharing Demand | `Rented Bike Count` | `12_seoul_bike_sharing_demand` |  | Belum | Belum | Belum | Tangani tanggal dan kategori sederhana. |
