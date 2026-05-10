@@ -71,6 +71,7 @@ Aturan:
 - Jangan gunakan kata `TODO`.
 - Jangan sertakan output apa pun.
 - Jangan sertakan execution count.
+- Code cell tidak boleh memiliki trailing whitespace atau baris kosong di akhir cell.
 - Bagian teknis berikut boleh sudah terisi default:
   - `warnings.filterwarnings("ignore")`
   - `pd.set_option("display.float_format", lambda x: f"{x:.3f}")`
@@ -115,6 +116,7 @@ Aturan:
 - Code cell berisi kode lengkap.
 - Output boleh ada dan harus relevan.
 - Usahakan satu code cell hanya menghasilkan satu output.
+- Code cell tidak boleh memiliki trailing whitespace atau baris kosong di akhir cell.
 - Hindari `print()` yang tidak perlu.
 - Gunakan ekspresi terakhir atau `display()` jika memang perlu menampilkan objek.
 - Markdown pertanyaan dari notebook assessment tetap dipakai, tetapi setiap `...` diganti dengan jawaban kunci.
@@ -178,6 +180,7 @@ Setelah membuat semua notebook, agent wajib mengecek:
 - Notebook assessment tidak memiliki output.
 - Notebook assessment tidak memiliki execution count.
 - Notebook assessment tidak memiliki code cell utama yang terisi, kecuali setting teknis default yang memang diizinkan.
+- Semua code cell bebas trailing whitespace dan tidak memiliki baris kosong di akhir cell.
 - Notebook assessment tidak mengandung `TODO`.
 - Notebook kunci jawaban memiliki kode lengkap.
 - Notebook kunci jawaban memiliki layout cell yang sama dengan assessment.
