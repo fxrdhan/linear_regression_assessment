@@ -1,0 +1,21 @@
+No,Dataset,Source URL,Recommended Target,Deskripsi Singkat
+1,Concrete Compressive Strength,https://archive.ics.uci.edu/dataset/165/concrete+compressive+strength,Concrete compressive strength,Dataset UCI untuk memprediksi kuat tekan beton dari komposisi bahan dan umur beton.
+2,Energy Efficiency,https://archive.ics.uci.edu/dataset/242/energy+efficiency,Heating Load or Cooling Load,Dataset UCI untuk memprediksi beban pemanasan atau pendinginan bangunan dari fitur desain bangunan.
+3,Real Estate Valuation,https://archive.ics.uci.edu/dataset/477/real+estate+valuation+data+set,house price of unit area,Dataset UCI untuk memprediksi harga rumah per unit area dari fitur lokasi dan properti.
+4,Auto MPG,https://archive.ics.uci.edu/dataset/9/auto+mpg,mpg,Dataset UCI untuk memprediksi efisiensi bahan bakar mobil dalam MPG dari spesifikasi kendaraan.
+5,Combined Cycle Power Plant,https://archive.ics.uci.edu/dataset/294/combined+cycle+power+plant,PE,Dataset UCI untuk memprediksi output energi pembangkit listrik dari kondisi lingkungan.
+6,Bike Sharing Dataset,https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset,cnt,Dataset UCI untuk memprediksi jumlah penyewaan sepeda dari informasi cuaca dan waktu.
+7,Wine Quality,https://archive.ics.uci.edu/dataset/186/wine+quality,quality,Dataset UCI untuk memprediksi kualitas wine dari fitur kimia yang semuanya numerik.
+8,Student Performance,https://archive.ics.uci.edu/dataset/320/student+performance,G3,Dataset UCI untuk memprediksi nilai akhir siswa dari data akademik dan karakteristik siswa.
+9,Air Quality,https://archive.ics.uci.edu/dataset/360/air+quality,CO(GT) or NOx(GT) or NO2(GT),Dataset UCI sensor kualitas udara untuk memprediksi konsentrasi polutan numerik.
+10,Medical Cost Personal Dataset / Insurance,https://www.kaggle.com/datasets/mirichoi0218/insurance,charges,Dataset Kaggle untuk memprediksi biaya asuransi kesehatan dari data demografi dan kebiasaan.
+11,Fish Market,https://www.kaggle.com/datasets/aungpyaeap/fish-market,Weight,Dataset Kaggle untuk memprediksi berat ikan dari ukuran fisik dan spesies ikan.
+12,Seoul Bike Sharing Demand,https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand,Rented Bike Count,Dataset UCI untuk memprediksi jumlah penyewaan sepeda di Seoul dari cuaca dan kalender.
+13,House Rent Prediction Dataset,https://www.kaggle.com/datasets/iamsouravbanerjee/house-rent-prediction-dataset,Rent,Dataset Kaggle untuk memprediksi harga sewa rumah dari lokasi dan detail properti.
+14,Airfoil Self-Noise,https://archive.ics.uci.edu/dataset/291/airfoil+self+noise,scaled-sound-pressure,Dataset UCI eksperimen airfoil NASA untuk memprediksi tingkat tekanan suara.
+15,Yacht Hydrodynamics,https://archive.ics.uci.edu/ml/datasets/yacht+hydrodynamics,residuary resistance,Dataset UCI untuk memprediksi hambatan residu yacht dari parameter hidrodinamika.
+16,Appliances Energy Prediction,https://archive.ics.uci.edu/dataset/374/appliances+energy+prediction,Appliances,"Dataset UCI untuk memprediksi konsumsi energi peralatan rumah dari data suhu, kelembapan, dan waktu."
+17,Concrete Slump Test,https://archive.ics.uci.edu/dataset/182/concrete+slump+test,Compressive Strength or SLUMP or FLOW,Dataset UCI beton slump untuk memprediksi kekuatan tekan atau karakteristik beton segar.
+18,Computer Hardware,https://archive.ics.uci.edu/ml/datasets/computer+hardware,PRP,Dataset UCI untuk memprediksi performa CPU dari spesifikasi perangkat keras komputer.
+19,QSAR Fish Toxicity,https://archive.ics.uci.edu/dataset/504/qsar+fish+toxicity,LC50,Dataset UCI kimia untuk memprediksi toksisitas ikan dari fitur molekuler numerik.
+20,Abalone,https://archive.ics.uci.edu/dataset/1/abalone,Rings,Dataset UCI untuk memprediksi jumlah rings abalone dari ukuran fisik dan jenis kelamin.
