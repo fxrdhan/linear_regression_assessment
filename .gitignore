@@ -5,3 +5,6 @@ __pycache__/
 ~$*
 .~lock.*#
 .kaggle_data/
+AGENTS.md
+DATASET_TRACKER.md
+linear_regression_notebook_template_spec.md
